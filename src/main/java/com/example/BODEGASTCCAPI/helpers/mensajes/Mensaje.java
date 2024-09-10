@@ -6,7 +6,18 @@ public enum Mensaje {
 
     VOLUMEN_NEGATIVO("El volumen no puede ser negativo"),
 
-    FECHA_INVALIDA("Revisa la fecha ingresada")
+    FECHA_INVALIDA("Revisa la fecha ingresada"),
+
+    DEPARTAMENTO_INVALIDO("Eso no es un departamento mi fai"),
+
+    METODO_PAGO_INVALIDO("Solo nequi o bancolombia mi so"),
+
+    NOMBRE_INVALIDO("no lo bautizaron o que mi so?")
+
+
+
+
+
 
 
 
