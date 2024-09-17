@@ -19,7 +19,7 @@ public class ControladorRemitente {
     RemitenteServicio remitenteServicio;
 
     // Método para guardar remitente
-    @PostMapping("/guardar")
+    @PostMapping
     public ResponseEntity<?> llamadoGuardarRemitente(@RequestBody Remitente datosRemitenteEnviadosCliente) {
         try {
             // Llamar al servicio para almacenar remitente

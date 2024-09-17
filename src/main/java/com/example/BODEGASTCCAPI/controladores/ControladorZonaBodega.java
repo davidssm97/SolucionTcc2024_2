@@ -18,7 +18,7 @@ public class ControladorZonaBodega {
     private ZonaBodegaServicio zonaBodegaServicio;
 
     // Guardar una nueva zona de bodega
-    @PostMapping("/guardar")
+    @PostMapping
     public ResponseEntity<?> guardarZonaBodega(@RequestBody ZonaBodega zonaBodega) {
         try {
             ZonaBodega zonaGuardada = zonaBodegaServicio.almacenarZonaBodega(zonaBodega);
