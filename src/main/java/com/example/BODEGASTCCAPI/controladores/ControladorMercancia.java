@@ -23,13 +23,14 @@ public class ControladorMercancia {
 
     //llamar a cadauno de los metodos disponibles en el servicio
 
+
     @PostMapping
     public ResponseEntity<?> LlamadoGuardarMercancia(@RequestBody Mercancia datosMercanciaEnviadosCliente){
         try {
 
             return ResponseEntity
                     .status(HttpStatus.OK)
-                    .body(this.mercanciaServicio.almacenarMercancia(datosMercanciaEnviadosCliente));
+                    .body(this.mercanciaServicio.almacenarMercanciaDTO(datosMercanciaEnviadosCliente));
 
         }catch (Exception error){
 
