@@ -1,38 +1,19 @@
-package com.example.BODEGASTCCAPI.modelos;
+package com.example.BODEGASTCCAPI.modelos.dto;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import jakarta.persistence.*;
+public class ZonaBodegaDTO {
 
-import java.util.List;
-
-@Entity
-@Table(name = "zonas")
-public class ZonaBodega {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id_zona")
-    private  Long idZona;
-    @Column(name = "nombre_zona", nullable = false)
+    private Long idZona;
     private String nombreZona;
-    @Column(name = "capacidad_maxima_volumen", nullable = false)
     private Double capacidadMaximaVolumen;
-    @Column(name = "capacidad_maxima_peso", nullable = false)
     private Double capacidadMaximaPeso;
-    @Column(name = "capacidad_volumen_ocupado", nullable = false)
     private Double capacidadVolumenOcupado;
-    @Column(name = "capacidad_peso_ocupado", nullable = false)
     private Double capacidadPesoOcupado;
 
 
-    @OneToMany(mappedBy = "zonaBodega")
-    @JsonManagedReference
-    private List<Mercancia> mercancias;
-
-
-    public ZonaBodega() {
+    public ZonaBodegaDTO() {
     }
 
-    public ZonaBodega(Long idZona, String nombreZona, Double capacidadMaximaVolumen, Double capacidadMaximaPeso, Double capacidadVolumenOcupado, Double capacidadPesoOcupado) {
+    public ZonaBodegaDTO(Long idZona, String nombreZona, Double capacidadMaximaVolumen, Double capacidadMaximaPeso, Double capacidadVolumenOcupado, Double capacidadPesoOcupado) {
         this.idZona = idZona;
         this.nombreZona = nombreZona;
         this.capacidadMaximaVolumen = capacidadMaximaVolumen;
